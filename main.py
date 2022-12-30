@@ -2,6 +2,7 @@ import discord
 import os
 from keep_alive import keep_alive
 from weather import get_weather
+from help import help
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -19,9 +20,17 @@ async def on_message(message):
     return
 
   if message.content == '~hello':
-    await message.channel.send('Hello! Enter ~help to get the list of all the commands!')
+    await message.channel.send(
+      'Hello! Enter ~help to get the list of all the commands!')
 
-  if message.content.startswith('~weather'): 
+  if message.content == '~help':
+    to_print_commands = help()
+    lst = ""
+    for str in to_print_commands:
+      lst += str + "\n"
+    await message.channel.send(lst)
+
+  if message.content.startswith('~weather'):
     city = message.content[slice(9, len(message.content))]
     print(city)
     result = get_weather(city)
