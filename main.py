@@ -33,7 +33,7 @@ async def on_message(message):
 
   # WEATHER
   if message.content.startswith('~w'):
-    city = message.content[slice(9, len(message.content))]
+    city = message.content[slice(3, len(message.content))]
     result = get_weather(city)
     await message.channel.send(embed=result)
 
