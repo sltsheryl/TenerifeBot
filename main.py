@@ -1,10 +1,9 @@
 import discord
 import os
 from keep_alive import keep_alive
-from weather import get_weather
+from weather.weather import get_weather
 from help import help
-from translate import translate
-from translate import get_languages
+from translate.translate import translate, get_languages
 
 intents = discord.Intents.default()
 intents.message_content = True
