@@ -20,6 +20,6 @@ Click [here](https://discord.com/api/oauth2/authorize?client_id=1057363158756495
 Type ```~help``` to start by getting the list of commands!
 
 ## Notes
-The bot is still under development. <br>
-*Caution: Avoid spamming commands as Discord imposes a rate limit.*
+The bot is still under development. <br> 
+*Caution: Avoid spamming commands as Discord imposes a rate limit.* <br>
 Look out for new features! And feel free to create a PR if you spot any bugs or improvements :)
