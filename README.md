@@ -21,4 +21,5 @@ Type ```~help``` to start by getting the list of commands!
 
 ## Notes
 The bot is still under development. <br>
+*Caution: Avoid spamming commands as Discord imposes a rate limit.*
 Look out for new features! And feel free to create a PR if you spot any bugs or improvements :)
