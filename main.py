@@ -6,6 +6,7 @@ from help import help
 from translate.translate import translate, get_languages
 from quickmath.qmgame import add_score, get_question, get_score, reset, reply_ongoing, welcome_message
 from quickmath.qmgame import reply_correct, reply_incorrect, switch_qm_ongoing, get_qm_status
+from quote.quote import get_quote
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -61,6 +62,11 @@ async def on_message(message):
     else:
       await message.channel.send(translated_message)
 
+# QUOTE
+  if message.content == '~quote':
+    res = get_quote()
+    await message.channel.send(res)
+
 
 # QUICKMATH
 # START
@@ -113,3 +119,4 @@ async def on_message(message):
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
+
